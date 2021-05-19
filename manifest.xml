@@ -1,7 +1,20 @@
-<!--
-     Copyright 2021, Data61, CSIRO
-     SPDX-License-Identifier: BSD-2-Clause
--->
 <manifest>
-	<!-- An empty manifest, so that `git diff` shows a difference -->
+  <remote name="github-hol4" fetch="ssh://git@github.com/HOL-Theorem-Prover"/>
+  <remote name="github-polyml" fetch="ssh://git@github.com/polyml"/>
+  <remote name="github" fetch="ssh://git@github.com/seL4"/>
+  <remote name="verification" fetch="ssh://git@bitbucket.ts.data61.csiro.au:7999/seL4"/>
+  <remote name="projects" fetch="ssh://git@bitbucket.ts.data61.csiro.au:7999/sel4proj"/>
+  <project name="HOL" path="HOL4" remote="github-hol4" revision="79c2f6fae3338794b0290aeb7fed338be456efcd"/>
+  <project name="polyml" path="HOL4/polyml" remote="github-polyml" revision="b94e1fb57e5f0551762ef984fa95c659c13177f0"/>
+  <project name="graph-refine" path="graph-refine" remote="github" revision="4e83cd93e2a4744f19bf3f39fb1313753c97bbee"/>
+  <project name="graph-refine-internal" path="graph-refine/internal" remote="verification" revision="109792aa174003528bb780472d580ef00133dca6"/>
+  <project name="isabelle" path="isabelle" remote="github" revision="e7307f8c1ed6a3620b0606e9857cd19de6afb608"/>
+  <project name="l4v" path="l4v" remote="github" revision="35fe332668b3ed1386289cddb61f6d699eb622dc"/>
+  <project name="l4v-internal" path="l4v/internal" remote="verification" revision="14a1d5d01b74099d1d0887ef3765df8bd4651901"/>
+  <project name="seL4" path="seL4" remote="github" revision="608ab322e22ac4528c9b68e4e61752e2c756d2de"/>
+  <project name="bump" path="tools-internal/bump" remote="projects" revision="f5dfdf364bf295880f281cafea4d6886c7427a77"/>
+  <project name="l4v-deps" path="tools-internal/l4v-deps" remote="projects" revision="7c98f3b9bae20053dfb9d94d4f3f03c4b33243db"/>
+  <project name="license-tool" path="tools-internal/license-tool" remote="projects" revision="321e81e4544e7ff8f415ca787447d154c1ca1ba2"/>
+  <project name="l4v-preprocess" path="tools-internal/preprocess" remote="projects" revision="5336d0deeced6f5eddc79bc5215df3878d6a537b"/>
+  <project name="testboard" path="tools-internal/testboard" remote="projects" revision="2a18c695a74c9e39545b513412c41a8885047c19"/>
 </manifest>

@@ -1,7 +1,11 @@
-<!--
-     Copyright 2021, Data61, CSIRO
-     SPDX-License-Identifier: BSD-2-Clause
--->
 <manifest>
-	<!-- An empty manifest, so that `git diff` shows a difference -->
+  <remote name="verification" fetch="ssh://git@github.com/seL4"/>
+  <remote name="ryan" fetch="https://github.com/ryybrr"/>
+  <remote name="proofcraft" fetch="ssh://git@github.com/proofcraft"/>
+  <project name="HOL" path="HOL4" remote="verification" revision="ab03cec5200c8b23f9ba60c5cea958cfcd0cd158"/>
+  <project name="polyml" path="HOL4/polyml" remote="verification" revision="bf2020d077bfbb1c5911dcef20bd275c95da7162"/>
+  <project name="graph-refine" path="graph-refine" remote="verification" revision="78c74f18127db53606f18f775a5a50de86bc6b97"/>
+  <project name="isabelle" path="isabelle" remote="verification" revision="e7307f8c1ed6a3620b0606e9857cd19de6afb608"/>
+  <project name="l4v" path="l4v" remote="ryan" revision="5ae994e5511dcfcea286e395c0b72c1250ddad59"/>
+  <project name="seL4-priv" path="seL4" remote="proofcraft" revision="7a9cf4de10d20b27a932b4633099e536e9f2e7e2"/>
 </manifest>

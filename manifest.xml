@@ -1,7 +1,21 @@
-<!--
-     Copyright 2021, Data61, CSIRO
-     SPDX-License-Identifier: BSD-2-Clause
--->
 <manifest>
-	<!-- An empty manifest, so that `git diff` shows a difference -->
+  <remote name="github-hol4" fetch="ssh://git@github.com/HOL-Theorem-Prover"/>
+  <remote name="github-polyml" fetch="ssh://git@github.com/polyml"/>
+  <remote name="github" fetch="ssh://git@github.com/seL4"/>
+  <remote name="verification" fetch="ssh://git@bitbucket.ts.data61.csiro.au:7999/seL4"/>
+  <remote name="mbrcknl" fetch="ssh://git@github.com/mbrcknl"/>
+  <remote name="projects" fetch="ssh://git@bitbucket.ts.data61.csiro.au:7999/sel4proj"/>
+  <project name="HOL" path="HOL4" remote="github-hol4" revision="c45b5d91d4ced684f5db44391046ff719bf56fed"/>
+  <project name="polyml" path="HOL4/polyml" remote="github-polyml" revision="f86ae3dc168612d51e7a73fbe3b7e02cb3bc1bac"/>
+  <project name="graph-refine" path="graph-refine" remote="github" revision="4e83cd93e2a4744f19bf3f39fb1313753c97bbee"/>
+  <project name="graph-refine-internal" path="graph-refine/internal" remote="verification" revision="109792aa174003528bb780472d580ef00133dca6"/>
+  <project name="isabelle" path="isabelle" remote="github" revision="e7307f8c1ed6a3620b0606e9857cd19de6afb608"/>
+  <project name="l4v" path="l4v" remote="mbrcknl" revision="f0330753c263b69dff505e4715f6fd068c63d511"/>
+  <project name="l4v-internal" path="l4v/internal" remote="verification" revision="14a1d5d01b74099d1d0887ef3765df8bd4651901"/>
+  <project name="seL4" path="seL4" remote="verification" revision="5665e2ce6504ea6265c5788d2222de4e44378453"/>
+  <project name="bump" path="tools-internal/bump" remote="projects" revision="f5dfdf364bf295880f281cafea4d6886c7427a77"/>
+  <project name="l4v-deps" path="tools-internal/l4v-deps" remote="projects" revision="7c98f3b9bae20053dfb9d94d4f3f03c4b33243db"/>
+  <project name="license-tool" path="tools-internal/license-tool" remote="projects" revision="3a338581237ee949066c815d802c09bda0248ff2"/>
+  <project name="l4v-preprocess" path="tools-internal/preprocess" remote="projects" revision="5336d0deeced6f5eddc79bc5215df3878d6a537b"/>
+  <project name="testboard" path="tools-internal/testboard" remote="projects" revision="2a18c695a74c9e39545b513412c41a8885047c19"/>
 </manifest>

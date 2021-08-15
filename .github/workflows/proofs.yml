@@ -1,0 +1,35 @@
+# Copyright 2021, Proofcraft Pty Ltd
+#
+# SPDX-License-Identifier: BSD-2-Clause
+
+# Run proof test for any branch that is pushed
+name: Proofs
+
+on:
+  push:
+
+jobs:
+  proofs:
+    name: All
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [ARM, ARM_HYP, RISCV64, X64]
+    steps:
+    - name: Proofs
+      uses: seL4/ci-actions/aws-proofs@master
+      with:
+        L4V_ARCH: ${{ matrix.arch }}
+        manifest: manifest.xml
+        cache_name: seL4/l4v-default-devel-${{ matrix.arch }}
+        cache_write: ''
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_SSH: ${{ secrets.AWS_SSH }}
+    - name: Upload logs
+      uses: actions/upload-artifact@v2
+      with:
+        name: logs-${{ matrix.arch }}
+        path: logs.tar.xz

@@ -1,7 +1,9 @@
-<!--
-     Copyright 2021, Data61, CSIRO
-     SPDX-License-Identifier: BSD-2-Clause
--->
 <manifest>
-	<!-- An empty manifest, so that `git diff` shows a difference -->
+  <remote name="verification" fetch="https://github.com/seL4"/>
+  <project name="HOL" path="HOL4" remote="verification" revision="ab03cec5200c8b23f9ba60c5cea958cfcd0cd158"/>
+  <project name="polyml" path="HOL4/polyml" remote="verification" revision="bf2020d077bfbb1c5911dcef20bd275c95da7162"/>
+  <project name="graph-refine" path="graph-refine" remote="verification" revision="8924af0c61c3c863db7957e0ebac7ae1ceefad9d"/>
+  <project name="isabelle" path="isabelle" remote="verification" revision="7ff05d86cb1b613f8eb3ede86b698e7945bf1c6d"/>
+  <project name="l4v" path="l4v" remote="verification" revision="2a811091ae5d737878ccb81361acd665c6b16c04"/>
+  <project name="seL4" path="seL4" remote="verification" revision="773ec49d2b6e87f880c2ad6e2df297e3d5f11807"/>
 </manifest>

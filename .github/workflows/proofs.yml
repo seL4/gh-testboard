@@ -26,6 +26,7 @@ jobs:
         manifest: manifest.xml
         cache_name: seL4/l4v-default-devel-${{ matrix.arch }}
         cache_write: ''
+        session: '-x AutoCorresSEL4'
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

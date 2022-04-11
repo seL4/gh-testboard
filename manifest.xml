@@ -1,7 +1,6 @@
-<!--
-     Copyright 2021, Data61, CSIRO
-     SPDX-License-Identifier: BSD-2-Clause
--->
 <manifest>
-	<!-- An empty manifest, so that `git diff` shows a difference -->
+  <remote name="verification" fetch="https://github.com/seL4"/>
+  <project name="isabelle" path="isabelle" remote="verification" revision="7ff05d86cb1b613f8eb3ede86b698e7945bf1c6d"/>
+  <project name="l4v" path="l4v" remote="verification" revision="8ea308700af5b557f7b7b9fc37339bcc3a631ceb"/>
+  <project name="seL4" path="seL4" remote="verification" revision="1612a7f61d1583859373edc3cf290daa2e719d1a"/>
 </manifest>
